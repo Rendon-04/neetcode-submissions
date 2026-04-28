@@ -1,0 +1,30 @@
+from typing import List
+
+
+def in_bounds(grid: List[List[int]], r: int, c: int) -> bool:
+    # grid = [list]
+    # row = one number
+    # column = one number
+    # r is the index
+    # c is the length
+    # we nee to return true if the cell at row r and column c are within the bound of 
+    # the grid 
+
+    rows = len(grid)
+    columns = len(grid[0])
+    # 0 <= index < length
+
+    if 0 <= r < rows or 0 <= c < columns:
+        return True
+    return False
+    
+    
+    
+# do not modify below this line
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 0, 0))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2, 2))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1, 1))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 4, 3))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, 4))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3, -1))
+print(in_bounds([[1, 2, 3], [4, 5, 6], [7, 8, 9]], -1, 3))
